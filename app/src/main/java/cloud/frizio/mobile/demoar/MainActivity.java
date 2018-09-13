@@ -9,7 +9,13 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.google.ar.sceneform.ux.ArFragment;
+
+
 public class MainActivity extends AppCompatActivity {
+
+    // TODO 5 - Add the ArFragment field
+    private ArFragment fragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +32,11 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        // TODO 5 - Initialize the ArFragment field
+        fragment = (ArFragment)
+                getSupportFragmentManager().findFragmentById(R.id.sceneform_fragment);
+
     }
 
     @Override
