@@ -12,6 +12,7 @@ import android.support.annotation.Nullable;
 // TODO 7 - Pointer
 public class PointerDrawable extends Drawable {
 
+    // TODO 8 -
     // Paint object for drawing
     private final Paint paint = new Paint();
     // Boolean flag for indicating enabled or disabled
@@ -24,19 +25,21 @@ public class PointerDrawable extends Drawable {
         this.enabled = enabled;
     }
 
+    // TODO 9 -
     @Override
     public void draw(@NonNull Canvas canvas) {
         /*
-        Draw a circle in green when enabled, and an X in gray when disabled.
+        Draw a circle in green when enabled,
+        and an (X in gray)  when disabled.
          */
         float cx = canvas.getWidth() / 2;
         float cy = canvas.getHeight() / 2;
         if (enabled) {
             paint.setColor(Color.GREEN);
-            canvas.drawCircle(cx, cy, 10, paint);
+            canvas.drawCircle(cx, cy, 20, paint);
         } else {
-            paint.setColor(Color.GRAY);
-            canvas.drawText("X", cx, cy, paint);
+            paint.setColor(Color.RED);
+            canvas.drawCircle(cx, cy, 10, paint);
         }
 
     }
